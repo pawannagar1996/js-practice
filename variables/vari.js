@@ -51,3 +51,56 @@ console.log('bg string lenght Upper',bigLenght);
 bigLenght = bigLenght.toLowerCase();
 
 console.log('bg string lenght lower',bigLenght);
+
+
+// string
+
+
+
+let a = true;
+
+console.log(typeof a);
+console.log(a);
+
+
+
+// array
+
+
+const numberArray = [1, 2, 3, 4];
+
+console.log(typeof numberArray);
+console.log(numberArray);
+
+const stringArray = ['pawan', 'nagar'];
+
+console.log(stringArray);
+
+const booleanArray = [true, false];
+
+console.log(booleanArray);
+
+
+//object
+
+const checkObject = {name:'pawan',}
+
+console.log(typeof checkObject);
+console.log(checkObject);
+
+const form = {
+    name : 'pawan',
+    last_name : 'nagar',
+    address : {
+        block : 'C = 308 j j coloeny Tigri',
+        Landmark : 'SBI bank',
+        pincode : '110080'
+    },
+
+    Gender : 'Male',
+
+    Hobbies : ['sleeping','wathing movies']
+
+}
+
+console.log(form);
