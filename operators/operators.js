@@ -10,7 +10,15 @@ const a = 10;
 console.log(a);
 
 
-// Arithmetic Operators (+, -, *, /, %, **)
+// Arithmetic Operators (+, -, *, /, %, **)+	Addition	x + y
+// +	Addition	x + y
+// -	Subtraction	x - y
+// *	Multiplication	x * y
+// /	Division	x / y
+// %	Remainder	x % y
+// ++	Increment (increments by 1)	++x or x++
+// --	Decrement (decrements by 1)	--x or x--
+// **	Exponentiation (Power)	x ** y
 
 
 let x = 20;
