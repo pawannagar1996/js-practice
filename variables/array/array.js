@@ -11,22 +11,23 @@ console.log(spliceArray);
 console.log('==========================================================');
 
 // add
+
 const spliceArray1 = [1, 2, 5, 7, 8, 10, 12, 24];
-spliceArray1 .splice(0, 0, 555,666);
+spliceArray1.splice(0, 0, 555, 666);
 console.log(spliceArray1);
 
 
-spliceArray1 .splice(100, 0, 555,666);
+spliceArray1.splice(100, 0, 555, 666);
 console.log(spliceArray1);
 
 console.log('==========================================================');
 
 // delete and add 
-const spliceArray2 = ['apple', 'mango', 'papaya','pineapple', 'berry']
+const spliceArray2 = ['apple', 'mango', 'papaya', 'pineapple', 'berry']
 const numItm = spliceArray2.indexOf('papaya');// to get number of index
 console.log(numItm)// check index f knowledge
 
-spliceArray2.splice(numItm, 1, 'papita' )
+spliceArray2.splice(numItm, 1, 'papita')
 console.log(spliceArray2);
 
 // delete last number
@@ -40,8 +41,8 @@ console.log(spliceArray3)
 
 // delete starting string number (delete starting 2 string)
 
-const spliceArray4 = ['html', 'css', 'js','python', 'php', 'mysql'];
-spliceArray4.splice(0,2)
+const spliceArray4 = ['html', 'css', 'js', 'python', 'php', 'mysql'];
+spliceArray4.splice(0, 2)
 console.log(spliceArray4)
 
 
@@ -75,5 +76,115 @@ const lasArrayVal2 = sliceArray3.length // this print last string
 
 console.log(startArrayVal1)
 console.log(lasArrayVal2)
-const lastValSlice1 = sliceArray3.slice(startArrayVal1,lasArrayVal2 )
+const lastValSlice1 = sliceArray3.slice(startArrayVal1, lasArrayVal2)
 console.log(lastValSlice1)
+
+
+
+console.log('============ find of ======================')
+
+
+
+const person = [{
+    Name: 'suraj', voterid: '545478',
+    address: [{
+        localaddress: { houseo: 'W 88 khanpur new delhi', pinno: 110029 },
+        permanentaddress: { houseno: 'O 447 saket new delhi', pinno: 110018 }
+    }],
+    numbers: [{ phoneno: 1122558877, officeno: 0112222225544 }],
+    Email: 'suraj@gmail.com',
+    gender: 'male',
+    childreen: [
+        { name: 'sruti', age: 5 },
+        { name: 'shanti', age: 5 },
+        { name: 'radha', age: 5 },
+
+    ]
+},
+
+
+{
+    Name: 'Pawan', voterid: '5552222111',
+    address: [{
+        localaddress: { houseo: 'd 555 ito new delhi', pinno: 110029 },
+        permanentaddress: { houseno: 'E 212 devli new delhi', pinno: 110062 }
+    }],
+    numbers: [{ phoneno: 3333666655, officeno: 01155554444 }],
+    Email: 'pawan@gmail.com',
+    gender: 'male',
+    childreen: [
+        { name: 'pankaj', age: 5 },
+        { name: 'hemant', age: 5 },
+        { name: 'arun', age: 5 },
+
+    ]
+},
+{
+    Name: 'nakul', voterid: 'sxxfc555',
+    address: {
+        localaddress: { houseo: 'c 55 devli new delhi', pinno: 110062 },
+        permanentaddress: { houseno: 'r 5 sangam new delhi', pinno: 110080 }
+    },
+    numbers: [{ phoneno: 8888888888, officeno: 01174474 }],
+    Email: 'nakul@gmail.com',
+    gender: 'male',
+    childreen: [
+        { name: 'chiku', age: 5 },
+        { name: 'aalu', age: 5 },
+        { name: 'lashan', age: 15 },
+
+    ]
+},
+{
+    Name: 'pinki', voterid: 's5465c555',
+    address: {
+        localaddress: { houseo: 'DE 555 devli new delhi', pinno: 110088 },
+        permanentaddress: { houseno: 'EWR 23232 sangam new delhi', pinno: 110099 }
+    },
+    numbers: [{ phoneno: 89895956, officeno: 011111445 }],
+    Email: 'pinki@gmail.com',
+    gender: 'female',
+    childreen: [
+        { name: 'ronak', age: 18 },
+        { name: 'shalu', age: 15 },
+        { name: 'daniya', age: 15 },
+
+    ]
+},
+{
+    Name: 'jyoti', voterid: 'ddd333665',
+    address: {
+        localaddress: { houseo: 'SWE 789 khanpur new delhi', pinno: 1100855 },
+        permanentaddress: { houseno: 'IOO 356 sangam new delhi', pinno: 110096 }
+    },
+    numbers: [{ phoneno: 259987522, officeno: 011215745123 }],
+    Email: 'pinki@gmail.com',
+    gender: 'female',
+    childreen: [
+        { name: 'ronak', age: 18 },
+        { name: 'shalu', age: 15 },
+        { name: 'daniya', age: 15 },
+
+    ]
+}
+
+];
+
+
+console.log(person);
+
+function match(value) {
+
+    if (value.gender === 'female') {
+        return true
+    }
+    return false;
+}
+
+
+
+const personFind = person.filter(match);
+
+// const personphone = personFind.address.localaddress
+
+console.log(personFind);
