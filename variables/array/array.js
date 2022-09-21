@@ -169,7 +169,7 @@ const person = [{
 }
 
 ];
-
+console.log('==========================female/================================');
 
 console.log(person);
 
@@ -188,3 +188,200 @@ const personFind = person.filter(match);
 // const personphone = personFind.address.localaddress
 
 console.log(personFind);
+
+
+
+
+console.log('==========================male/================================');
+
+
+
+const person1 = [{
+    Name: 'suraj', voterid: '545478',
+    address: [{
+        localaddress: { houseo: 'W 88 khanpur new delhi', pinno: 110029 },
+        permanentaddress: { houseno: 'O 447 saket new delhi', pinno: 110018 }
+    }],
+    numbers: [{ phoneno: 1122558877, officeno: 0112222225544 }],
+    Email: 'suraj@gmail.com',
+    gender: 'male',
+    childreen: [
+        { name: 'sruti', age: 5 },
+        { name: 'shanti', age: 5 },
+        { name: 'radha', age: 5 },
+
+    ],
+    hobbies: ['criket', 'football']
+},
+
+
+{
+    Name: 'Pawan', voterid: '5552222111',
+    address: [{
+        localaddress: { houseo: 'd 555 ito new delhi', pinno: 110029 },
+        permanentaddress: { houseno: 'E 212 devli new delhi', pinno: 110062 }
+    }],
+    numbers: [{ phoneno: 3333666655, officeno: 01155554444 }],
+    Email: 'pawan@gmail.com',
+    gender: 'male',
+    childreen: [
+        { name: 'pankaj', age: 5 },
+        { name: 'hemant', age: 5 },
+        { name: 'arun', age: 5 },
+
+    ],
+    hobbies: ['criket', 'dance']
+},
+{
+    Name: 'nakul', voterid: 'sxxfc555',
+    address: {
+        localaddress: { houseo: 'c 55 devli new delhi', pinno: 110062 },
+        permanentaddress: { houseno: 'r 5 sangam new delhi', pinno: 110080 }
+    },
+    numbers: [{ phoneno: 8888888888, officeno: 01174474 }],
+    Email: 'nakul@gmail.com',
+    gender: 'male',
+    childreen: [
+        { name: 'chiku', age: 5 },
+        { name: 'aalu', age: 5 },
+        { name: 'lashan', age: 15 },
+
+    ],
+    hobbies: ['singing', 'movies']
+},
+{
+    Name: 'pinki', voterid: 's5465c555',
+    address: {
+        localaddress: { houseo: 'DE 555 devli new delhi', pinno: 110088 },
+        permanentaddress: { houseno: 'EWR 23232 sangam new delhi', pinno: 110099 }
+    },
+    numbers: [{ phoneno: 89895956, officeno: 011111445 }],
+    Email: 'pinki@gmail.com',
+    gender: 'female',
+    childreen: [
+        { name: 'ronak', age: 18 },
+        { name: 'shalu', age: 15 },
+        { name: 'daniya', age: 15 },
+
+    ],
+    hobbies: ['cooking', 'dance']
+},
+{
+    Name: 'jyoti', voterid: 'ddd333665',
+    address: {
+        localaddress: { houseo: 'SWE 789 khanpur new delhi', pinno: 1100855 },
+        permanentaddress: { houseno: 'IOO 356 sangam new delhi', pinno: 110096 }
+    },
+    numbers: [{ phoneno: 259987522, officeno: 011215745123 }],
+    Email: 'pinki@gmail.com',
+    gender: 'female',
+    childreen: [
+        { name: 'ronak', age: 18 },
+        { name: 'shalu', age: 15 },
+        { name: 'daniya', age: 15 },
+
+    ],
+    hobbies: ['wwe', 'boxing']
+}
+
+];
+
+
+console.log(person1);
+
+
+// function match(value) {
+
+//     if (value.gender === 'male') {
+//         return true
+//     }
+//     return false;
+// }
+
+
+
+const personFind1 = person1.filter(match => match.gender == 'male');
+
+// const personphone = personFind.address.localaddress
+
+console.log(personFind1);
+
+
+
+// function match(value) {
+
+//     if (value.childreen.Name === 'ronak') {
+//         return true
+//     }
+//     return false;
+// }
+
+// const personFind2 = person1.filter(match);
+
+// console.log(personFind2);
+
+
+
+
+
+function match(value) {
+    const child = value.childreen.findIndex(findChildren)
+    if (child != -1){
+        return true
+    }
+
+    return false;
+}
+
+function findChildren(value){
+    if ( value.name =='ronak'){
+        return true
+    }
+    return false;
+}
+
+const personFind3 = person1.filter(match);
+
+console.log(personFind3);
+
+
+
+console.log('==========pawancode====================================');
+
+
+// const hobbiesArray =
+// {name:'suraj' , hobbies:'cricket'};
+   
+// // console.log(hobbiesArray);
+
+// function hobbie1 (value){
+   
+//     if( value.name === 'suraj'){
+//         return true;
+//     }
+//     return false;
+// }
+
+// const adharFemaleUsers = hobbiesArray.filter(hobbie1);
+
+// console.log(adharFemaleUsers);
+
+
+
+
+// function match(value){
+//     if(value.name === 'pawan'){
+//         return true
+//     }return false
+// }
+
+// const dddgg = pawancode.filter(match)
+//  console.log(dddgg);
+
+
+
+// const personFind44 = pawancode.findIndex(match);
+
+// console.log(personFind44);
+
+
