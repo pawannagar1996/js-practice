@@ -31,16 +31,88 @@ while(counter < 5) { // condition
 
 console.log('search name');
 
-let nameList=[]
 
-let index= 0;
+let listName = [];
+let index = 0 ;
+
 while(index < voterList.length){
-    const voterName = voterList[index];
 
-    if(voterName.name == 'sivani'){
-        nameList.push(index);
+    const searchLenght = voterList[index];
+
+    console.log('voterlist',searchLenght)
+
+    if(searchLenght.name == 'nakul'){
+
+listName.push(searchLenght)
     }
-    counter+=1;
-}
-console.log(nameList);
 
+    index += 1;
+
+}
+
+console.log(listName)
+
+let listName1 = [];
+index = 0 ;
+
+while(index < voterList.length){
+
+    const searchLenght1 = voterList[index];
+
+    console.log('voterlist1',searchLenght1)
+
+    const searchHobbies = searchLenght1.hobbies.indexOf('singing')
+
+    if(searchHobbies >= 0){
+
+listName1.push(searchLenght1)
+    }
+
+    index += 1;
+
+}
+
+
+console.log('=============hobbies============');
+
+
+console.log(listName1)
+
+
+//=============================search obrect me object
+
+
+let listName2 = [];
+index = 0 ;
+
+while(index < voterList.length){
+
+    const searchLenght2 = voterList[index];
+
+    // console.log('voterlist1',searchLenght2)
+
+    const childrenList = searchLenght2.chidren
+
+    // console.log('childre ist', childrenList)
+
+    const childrenListName = childrenList.length
+
+    console.log('childre list2', childrenListName)
+
+    const childrensearch = childrenListName.name('riya')
+
+
+    if(childrensearch >= 0){
+
+listName2.push(searchLenght2)
+    }
+
+    index += 1;
+
+}
+
+
+// console.log('=============hobbies============');
+
+
+// console.log(listName1)
