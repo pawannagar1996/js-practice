@@ -99,7 +99,7 @@ function match3(value){
     }
 
     function test(value){
-    if(value.name == 'riya'){
+    if(value.name == 'chinki'){
         return true
     }return false
 }
@@ -124,6 +124,7 @@ function test1(value){
         return true
     }return false
 }
+
 
 const searchArrayNumber = numberArray.filter(searhNumber)
 console.log(searchArrayNumber)

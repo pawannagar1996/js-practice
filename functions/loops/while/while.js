@@ -17,7 +17,8 @@ const voterList = [
         name: 'sivani', hobbies: ['wwe', 'dance'],
         chidren: [
             { name: 'chinki', gender: 'female', age: 1 },
-            { name: 'renu', gender: 'female', age: 6 }
+            { name: 'renu', gender: 'female', age: 6 },
+            { name: 'tinki', gender: 'female', age: 9 }
         ]
     }
 ];
@@ -79,40 +80,100 @@ console.log('=============hobbies============');
 console.log(listName1)
 
 
+
 //=============================search obrect me object
+console.log('search obrect me object')
 
 
-let listName2 = [];
-index = 0 ;
+const listName3 = [];
 
-while(index < voterList.length){
-
-    const searchLenght2 = voterList[index];
-
-    // console.log('voterlist1',searchLenght2)
-
-    const childrenList = searchLenght2.chidren
-
-    // console.log('childre ist', childrenList)
-
-    const childrenListName = childrenList.length
-
-    console.log('childre list2', childrenListName)
-
-    const childrensearch = childrenListName.name('riya')
+let index2 = 0;
+let index2a = 0;
 
 
-    if(childrensearch >= 0){
+const listLen = voterList.length;
 
-listName2.push(searchLenght2)
+while (index2 < listLen){
+
+    const listLoops = voterList[index2];
+
+    console.log(listLoops)
+
+
+    const hobbieslistLoops = listLoops.chidren;
+
+    const hobbieslistLoopslen = hobbieslistLoops.length
+    console.log('pawan',hobbieslistLoopslen);
+    let index3 = -1
+    while(index2a  < hobbieslistLoopslen){
+
+        const chidrenLoops = hobbieslistLoops[index2a]
+
+        if(chidrenLoops.name == 'chinki'){
+
+            index3 >= index2a
+            break;
+                }
+//  console.log('tttytyrth',chidrenLoops)
+        // console.log('pawan',chidrenLoops)
+
+    //     const searchChildrenName = chidrenLoops.name == 'riya'
+
+    //     if(searchChildrenName >= 0){
+    
+    // listName3.push(listLoops)
+    //     }
+
+        index2a +=1
+
+        if(index3 != -1){
+            listName3.push(listLoops)
+
+        }
+
+        
     }
 
-    index += 1;
+   
+   
 
+//    function matchL(value){
+//     if(value.name = 'riya'){
+//         return true
+//     }return false
+
+//    }
+//    console.log('pawan1', hobbieslistLoopsList )
+// if(hobbieslistLoopsList != -1){
+
+//     listName3.push(listLoops)
+//     }
+
+
+
+    index2 +=1
 }
+console.log('nagar',listName3 )
 
 
-// console.log('=============hobbies============');
 
 
-// console.log(listName1)
+// filter
+
+function match5(value){
+    const maatchChild = value.chidren.findIndex(valueMatch)
+
+    if(maatchChild != -1){
+        return true
+    } return false
+} 
+
+function valueMatch(value){
+    if (value.name = 'riya'){
+        return true
+    }return false
+}
+const searchChildName2 = voterList.filter(match5)
+console.log('=======filter')
+console.log(searchChildName2)
+
