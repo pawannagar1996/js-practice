@@ -1,25 +1,27 @@
 
-let Num  = 0
+let Num = 0
 
 
-while(Num <= 5){
+while (Num <= 5) {
 
-   if(Num <= 5){
+    if (Num <= 5) {
 
-   }
+    }
     console.log(Num)
     Num++
 }
 
+console.log('=========================')
+
 
 let outerIndex = 0;
 
-while(outerIndex <= 5){
+while (outerIndex <= 5) {
 
     let str = '';
     innerIndex = 0;
 
-    while(innerIndex <=  outerIndex){
+    while (innerIndex <= outerIndex) {
         str += '* '
         innerIndex++
     }
@@ -29,22 +31,119 @@ while(outerIndex <= 5){
 }
 
 
+console.log('=========================')
 
-outerIndex = 0;
 
-while(outerIndex <= 5){
+// outerIndex = 0;
 
-    let str = '*****';
-    innerIndex = 0;
+// while (outerIndex <= 5) {
 
-    while(innerIndex <=  outerIndex){
-        
-       let str1 = str.length - 1
+//     let str1 = '';
+//     let str = '*****';
+//     innerIndex = 0;
+//     innerIndex2 = 0;
 
-       str.splice(str1) 
+//     while (innerIndex <= outerIndex) {
+
+//         str1 = str.length - innerIndex2
+//         str.splice(str1)
+//         break
+//         innerIndex++
+//         innerIndex2++
+//     }
+//     console.log(str1)
+
+//     outerIndex += 1
+// }
+
+
+
+
+console.log('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
+
+
+// *****
+// ****
+// ***
+// **
+// *
+
+let outerIndex3 = 0;
+
+while (outerIndex3 <= 5) {
+    let str2 = ''
+    let innerIndex = 5;
+
+
+    while (outerIndex3 < innerIndex) {
+        str2 += '* '
+        innerIndex--
+
+    }
+    console.log(str2)
+    outerIndex3++
+
+}
+
+console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
+// *
+// *$
+// *$*
+// *$*$*
+// *$*$*$*
+
+let outerIndex4 = 0;
+
+while (outerIndex4 <= 5) {
+    let str3 = '';
+    let innerIndex = 0;
+
+    while (innerIndex <= outerIndex4) {
+
+        if (innerIndex % 2 === 0) {
+            str3 += '*'
+        } else { str3 += '$' }
+
         innerIndex++
     }
-    console.log(str)
+    console.log(str3)
 
-    outerIndex++
+    outerIndex4++
+}
+
+
+
+console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
+// $
+// **
+// **$
+// **$*
+// **$**
+// **$**$
+
+
+let add = 3 % 3
+console.log(add)
+
+
+let outerIndex5 = 0;
+
+while (outerIndex5 <= 6) {
+    let str4 = '';
+    let innerIndex = 0;
+
+    while (innerIndex <= outerIndex5) {
+
+        if (innerIndex % 3 === 0) {
+
+            str4 += '$'
+        } else { str4 += '*' }
+
+
+
+        innerIndex++
+    }
+
+    console.log(str4)
+    outerIndex5++
 }
