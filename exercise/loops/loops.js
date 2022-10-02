@@ -122,15 +122,20 @@ console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
 // **$**$
 
 
-let add = 3 % 3
-console.log(add)
+// let add = 9 % 3 
+// console.log(add)
 let outerIndex5 = 0;
 
-while (outerIndex5 <= 6) {
+while (outerIndex5 < 6) {
     let str4 = '';
     let innerIndex = 0;
     while (innerIndex <= outerIndex5) {
-        if (innerIndex % 3 === 0) {
+
+        if(outerIndex5===0){
+            str4 += '$'
+            break
+        }
+    if (innerIndex % 3 == 2) {
             str4 += '$'
         } else { str4 += '*' }
         innerIndex++
@@ -138,3 +143,81 @@ while (outerIndex5 <= 6) {
     console.log(str4)
     outerIndex5++
 }
+
+console.log('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
+
+
+// 000*
+// 00***
+// 0*****
+// *******
+
+
+//    *
+//   **
+//  ***
+// ****
+
+
+// 
+// *
+// **
+// ***
+
+
+let outerIndex7 = 0;
+
+while (outerIndex7 < 4) {
+    let str7 = '';
+    let innerIndex7 = 3;
+
+    while(outerIndex7<innerIndex7){
+        str7 += '0'
+        innerIndex7--
+    }
+
+    innerIndex7 = 0;
+    while(innerIndex7<=outerIndex7){
+
+        str7 += '*'
+        innerIndex7++
+    }
+    innerIndex7 = 1;
+    while(innerIndex7<=outerIndex7){
+
+        str7 += '*'
+        innerIndex7++
+    }
+
+console.log(str7)
+    outerIndex7++
+}
+
+
+
+
+console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+
+
+// *******
+// 0*****
+// 00***
+// 000*
+
+
+// 
+// 0
+// 00
+// 000
+
+// ****
+// ***
+// **
+// *
+
+// ***
+// **
+// *
+// 
+
+
