@@ -22,21 +22,30 @@ const OnceMap = [
    
 
   
+// //100 to 999
+// if(currentValue>99 && currentValue<1000 ){
+//     const tenPlaceValue = parseInt(currentValue / 100);
+//     const index = tenPlaceValue - 1;
+//         numberToWord += OnceMap[index]+' ' + 'Hundread';
+
+//         currentValue -= tenPlaceValue * 100; 
+//     }
 
 
-
-//100 to 99
+//100 to 999
   if(currentValue>99 && currentValue<1000 ){
     const tenPlaceValue = parseInt(currentValue / 100);
     const index = tenPlaceValue - 1;
         numberToWord += OnceMap[index]+' ' + 'Hundread';
+        console.log('##########################',numberToWord)
+        currentValue -= tenPlaceValue * 100; 
 
-        currentValue -= tenPlaceValue * 100;
+        console.log('##########################',currentValue)
     }
 
 
 
-//21 to 99
+// 21 to 99
 
   if(currentValue>20 && currentValue<100 && currentValue%10 != 0){
     const tenPlaceValue = parseInt(currentValue / 10);
@@ -48,18 +57,22 @@ const OnceMap = [
     }
 //10,20,30,40,50,60,70,80,90
     if(currentValue<99 && currentValue%10 == 0){
-        let index  = input/10
-        numberToWord = tensMap[index-1];
+        let index  = currentValue/10
+        numberToWord += tensMap[index-1];
     }
-
+   
 //1to 19
-    if(currentValue>0 && currentValue<20 && currentValue!=10){
+    if(currentValue>0 && currentValue<20){
         let index = currentValue-1
        numberToWord +=' ' + OnceMap[index];
    }
 
+   if(currentValue==0){
+    numberToWord += ''
+   }
+  
 return numberToWord
-
+ 
   }
-numberToWord = covertToWord(999)
-  console.log(numberToWord)
+numberToWord = covertToWord(410)
+  console.log('##########################',numberToWord)
