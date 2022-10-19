@@ -29,7 +29,7 @@ const numberToWordMap = {
   70: 'seventy',
   80: 'eighty',
   90: 'ninety',
-  100: 'hundred',
+  100: 'hundread',
   1000: 'thousand',
   100000: 'lakh'
 }
@@ -57,63 +57,101 @@ function convertToNumber(input){
   const splittedValues = input.split(' ')
   console.log(' -splittedValues -');
  
-  
   console.log(splittedValues)
 
   let len = splittedValues.length
 
-  console.log(len)
-  let numberToWord = '';
+  let wordToNumber = 0;
   let index = 0
 
   while(index<len){
-
-
     let print = splittedValues[index]
-    
 
-    
-      if (index == 0 && len == 1){
+
+    if(index==0){
+      let valueone = wordToNumberMap[print]
+       wordToNumber += valueone
+    }
+
+    if(index==1){
+let value = wordToNumberMap[print]
+ console.log('$$$$',wordToNumber)
+
+ if(value==1000){
+  value = wordToNumberMap[print]*wordToNumber-wordToNumber
+       wordToNumber += value      
+ }
+ else if(value==100){
+  value = wordToNumberMap[print]*wordToNumber-wordToNumber
+       wordToNumber += value      
+ }else{value = wordToNumberMap[print]     
+  wordToNumber += value}
+
+  console.log('%%%',wordToNumber)
+ }
+
+  if(index==2){
+    value = wordToNumberMap[print]  
+    wordToNumber += value
+    console.log('@@@@',wordToNumber)
+    }
+
+
+
+
+  if(index==3){
+
+    let value = wordToNumberMap[print]
+    if(value==100){
+
+      
+      console.log('1111',wordToNumber)
+      value = wordToNumberMap[print]
+
+
+      console.log('0000',value)
+
+           wordToNumber += value  
+           
+           console.log('22222',wordToNumber)
+     }else{value = wordToNumberMap[print]     
+      wordToNumber += value}
+    }
+
+    if(index==4 || index==5){
+      value = wordToNumberMap[print]  
+      wordToNumber += value
+      
+      }
+   
+
+
+   /*  
+   //this code mnot working upto 99 wprking only 1 to 99
+   
+   if (index == 0 && len == 1){
         let value = wordToNumberMap[print]
         // console.log(value)
         numberToWord += value
 
       }
-
-      if (index == 0 && len == 2){
+      if (index == 0 && len == 2 ){
         let value = wordToNumberMap[print]
         // console.log(value)
 
-        let cal = value/10
-        numberToWord += cal
-
+        // let cal = value/10
+        numberToWord += value
       }
       if (index == 1 && len == 2){
         let value = wordToNumberMap[print]
         // console.log(value)
-
-    
         numberToWord += value
-
-      }
-
-
-
-      
-     
-
-    
-
-
-
+      }*/
 index++
   }
- 
-
-console.log(numberToWord)
-
+  return wordToNumber
 }
 
+const numberValue5 = convertToNumber('two thousand eight hundread twenty one') // 110
 
-const numberValue5 = convertToNumber('forty one') // 110
-
+console.log(numberValue5)
