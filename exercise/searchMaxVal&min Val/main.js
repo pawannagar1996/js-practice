@@ -2,7 +2,7 @@
 
 
 
-const values = [3,12, 5, 32, 2, 36, 6]
+const values = [3,12, 5, 32, 2, 36, 6, 1, 4, 6, 0]
 
 let maxVal = 0
 let secMaxVal = 0
