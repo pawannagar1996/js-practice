@@ -10,16 +10,6 @@ let add = input[index]
 
 let output = 0 
 
-
-
-if(output<len){
-    let add2 = input[output]
-    // console.log(add2)
-     value+=add2
-
-    output++
-}
-
     index++
 }
 

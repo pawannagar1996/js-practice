@@ -127,4 +127,4 @@ function test1(value){
 
 
 const searchArrayNumber = numberArray.filter(searhNumber)
-console.log(searchArrayNumber)
+console.log('@@@@@@@@@@@',searchArrayNumber)
