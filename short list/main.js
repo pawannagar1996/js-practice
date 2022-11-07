@@ -53,22 +53,20 @@ const arrayOne = [
   ];
 
   function sortByAge(obj1, obj2) {
-    if(obj1 < obj2){
+    if(obj1.name < obj2.name){
         return -1;
       }
-      if(obj1 > obj2){
+      if(obj1.name > obj2.name){
         return 1;
       }
       return 0;
   }
-  let sortByAge2 = arrayOne.age
+  let sortByAge2 = arrayOne.sort(sortByAge)  ;
 
 //   console.log('#####',sortByAge2)
 
-
-  ;
   
   console.log('Array one after sorting');
-  console.log(arrayOne.name);
-  console.log('Array one after sorting');
   console.log(sortByAge2);
+  // console.log('Array one after sorting');
+  // console.log(sortByAge2);

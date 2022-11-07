@@ -1,16 +1,17 @@
 const input = [1, 5, 7, 5]
 
 let index = 0
-let value = 0
+let removeDup = []
 
 let len = input.length
 
 while(index<len){
-let add = input[index]
-
-let output = 0 
+    let arryRep = input[index]
+if(removeDup.indexOf(arryRep)==-1){
+    removeDup.push(arryRep)
+}
 
     index++
 }
 
-console.log(value)
+console.log(removeDup)
