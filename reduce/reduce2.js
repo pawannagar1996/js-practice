@@ -64,3 +64,8 @@ const totalFile2 = drive.myReduce((pre , cur) => {
 } , { NewFile: [], NewDirectory:[]})
 
 console.log(totalFile2)  
+
+
+const array =[
+  {}
+]
